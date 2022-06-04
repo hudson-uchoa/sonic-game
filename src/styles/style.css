@@ -20,14 +20,14 @@
     width: 65px;
     animation: spike-animation 2s infinite linear;
 }
-.sonic-running{
+.sonic{
     position: absolute;
     width: 135px;
     bottom: -25px;
 }
 
 .jump{
-    animation: jump 500ms ease-out;
+    animation: jump 700ms ease-out;
 }
 @keyframes spike-animation {
     from {
@@ -45,13 +45,16 @@
         bottom: -25px;
     }
     40%{
-        bottom: 70px;
-    }
-    50%{
         bottom: 75px;
     }
+    50%{
+        bottom: 80px;
+    }
     60%{
-        bottom: 65px;
+        bottom: 75px;
+    }
+    70%{
+        bottom: 60px;
     }
     100%{
         bottom: -25px;
