@@ -34,7 +34,7 @@
 .clouds{
     position: absolute;
     width: 500px;
-    animation: clouds 4s infinite linear;
+    animation: clouds 10s infinite linear;
 }
 @keyframes spike-animation {
     from {
