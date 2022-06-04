@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board{
+    /* mudar para 100 depois */
+    width: 90%;   
+    height: 500px;
+    border: 1px solid #333;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.spike{
+    position: absolute;
+    bottom: 0;
+    width: 65px;
+    animation: spike-animation 2s infinite linear;
+}
+
+
+@keyframes spike-animation {
+    from {
+        right: -65px;
+    }
+
+    to{
+        right: 100%;
+    }
+}
+
