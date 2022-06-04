@@ -1,0 +1,72 @@
+body,
+html {
+  height: 100%;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  box-sizing: border-box;
+}
+
+#gameBoard {
+  width: 100%;
+  height: 80%;
+  border: 1px solid black;
+  position: relative;
+  overflow: hidden;
+}
+
+.sWalking {
+  width: 200px;
+  bottom: -40px;
+  /* menor que */
+  /* bottom: 67px; */
+  /* = game over */
+  position: absolute;
+}
+
+.jump {
+  animation: sonic-jumping 560ms linear;
+}
+
+#spike {
+  width: 70px;
+  position: absolute;
+  bottom: 0;
+  /* menor que  */
+  /* left: 125px; */
+  /* = game over */
+  animation: spike-animation infinite 3s linear;
+}
+
+@keyframes spike-animation {
+  from {
+    right: -100px;
+  }
+
+  to {
+    right: 100%;
+  }
+}
+
+@keyframes sonic-jumping {
+  0% {
+    bottom: -40px;
+  }
+
+  40% {
+    bottom: 130px;
+  }
+
+  50% {
+    bottom: 130px;
+  }
+
+  60% {
+    bottom: 110px;
+  }
+
+  100% {
+    bottom: -40px;
+  }
+}
