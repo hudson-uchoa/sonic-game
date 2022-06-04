@@ -5,19 +5,21 @@
 }
 
 .game-board{
-    /* mudar para 100 depois */
-    width: 90%;   
+    
+    width: 100%;   
     height: 500px;
-    border: 1px solid #333;
+    border-bottom: 15px solid green;
     margin: 0 auto;
     position: relative;
     overflow: hidden;
+    background:linear-gradient(#87ceeb, #e0f6ff);
 }
 
 .spike{
     position: absolute;
     bottom: 0;
     width: 65px;
+    /* left: 93px; */
     animation: spike-animation 2s infinite linear;
 }
 .sonic{
@@ -28,6 +30,11 @@
 
 .jump{
     animation: jump 700ms ease-out;
+}
+.clouds{
+    position: absolute;
+    width: 500px;
+    animation: clouds 4s infinite linear;
 }
 @keyframes spike-animation {
     from {
@@ -59,5 +66,15 @@
     100%{
         bottom: -25px;
     }
+}
+
+@keyframes clouds{
+    from {
+        right: -500px;
+    }
+
+    to{
+        right: 100%;
+    } 
 }
 
