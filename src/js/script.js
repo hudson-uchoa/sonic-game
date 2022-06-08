@@ -3,6 +3,7 @@ const spike = document.querySelector("#spike");
 const scoreHtml = document.querySelector("#score");
 let score = 0;
 scoreHtml.innerText = `Score: ${score}`;
+
 const jump = () => {
   sonic.classList.add("jump");
   console.log(score);
@@ -17,11 +18,16 @@ const loop = setInterval(() => {
   const sonicPosition = +window
     .getComputedStyle(sonic)
     .bottom.replace("px", "");
-  console.log(spikePosition);
-  if (spikePosition <= 125 && spikePosition > 0 && sonicPosition <= 66) {
+
+  if (spikePosition <= 125 && spikePosition > 0 && sonicPosition <= 39) {
     spike.style.animation = "none";
     spike.style.left = `${spikePosition}px`;
+
+    sonic.classList.add("fail");
     sonic.style.bottom = `${sonicPosition}px`;
+
+    sonic.src = "../../assets/s-game-over.png";
+    sonic.style.width = "140px";
   } else if (spikePosition <= -60) {
     score += 100;
     scoreHtml.innerText = `Score: ${score}`;

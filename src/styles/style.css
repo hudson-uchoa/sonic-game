@@ -1,6 +1,6 @@
 body,
 html {
-  height: 100%;
+  height: 90%;
   width: 100%;
   padding: 0px;
   margin: 0px;
@@ -27,6 +27,10 @@ html {
 
 .jump {
   animation: sonic-jumping 560ms linear;
+}
+
+.fail {
+  animation: sonic-failing 800ms ease-out;
 }
 
 #spike {
@@ -68,5 +72,27 @@ html {
 
   100% {
     bottom: -40px;
+  }
+}
+
+@keyframes sonic-failing {
+  0% {
+    bottom: 0px;
+  }
+
+  40% {
+    bottom: 100px;
+  }
+
+  50% {
+    bottom: 100px;
+  }
+
+  60% {
+    bottom: 60px;
+  }
+
+  100% {
+    bottom: -100px;
   }
 }
