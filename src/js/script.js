@@ -17,11 +17,12 @@ const loop = setInterval(() => {
   const sonicPosition = +window
     .getComputedStyle(sonic)
     .bottom.replace("px", "");
+  console.log(spikePosition);
   if (spikePosition <= 125 && spikePosition > 0 && sonicPosition <= 66) {
     spike.style.animation = "none";
     spike.style.left = `${spikePosition}px`;
     sonic.style.bottom = `${sonicPosition}px`;
-  } else if (spikePosition <= 0) {
+  } else if (spikePosition <= -60) {
     score += 100;
     scoreHtml.innerText = `Score: ${score}`;
   }
